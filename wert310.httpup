@@ -3,6 +3,6 @@
 #
 
 ROOT_DIR=/usr/ports/wert310
-URL=http://wert310.github.io/crux-ports
+URL=https://raw.githubusercontent.com/wert310/crux-ports/master
 
 # End of file
