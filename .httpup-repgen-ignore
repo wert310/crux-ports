@@ -12,5 +12,6 @@
 sync.sh
 \.gif$
 \.gem$
+portspage.sh
 index.html
 wert310.httpup
