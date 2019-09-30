@@ -1,0 +1,16 @@
+\.svn$
+\.git$
+\.git/*
+\.tar\.gz$
+\.tar\.xz$
+\.tgz$
+\.partial$
+\.tar\.bz2$
+\.zip$
+(^|/)CVS(/|$)
+.*~$
+sync.sh
+\.gif$
+\.gem$
+index.html
+wert310.httpup

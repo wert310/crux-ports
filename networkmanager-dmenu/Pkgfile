@@ -1,0 +1,14 @@
+# Description: Small script to manage NetworkManager connections with dmenu instead of nm-applet
+# URL: https://github.com/firecat53/networkmanager-dmenu
+# Maintainer: Lorenzo Veronese, 310wert at gmail dot com
+# Depends on: python networkmanager python-gobject
+
+name=networkmanager-dmenu
+version=git
+release=1
+source=(https://github.com/firecat53/networkmanager-dmenu/archive/master.tar.gz)
+
+build() {
+  cd $name-master
+  install -Dm755 "networkmanager_dmenu" "$PKG/usr/bin/networkmanager_dmenu"
+}

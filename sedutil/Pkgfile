@@ -1,0 +1,20 @@
+# Description: s3 sleep version of sedutil
+# URL: https://github.com/Drive-Trust-Alliance/sedutil/
+# Maintainer: Lorenzo Veronese, 310wert at gmail dot com
+# Depends on: 
+
+name=sedutil
+version=1.15_badicsalex
+release=1
+source=(https://github.com/badicsalex/sedutil/archive/ecfd482016d41d035d9f128e91a51f107230a735.tar.gz)
+
+build() {
+  cd $name-ecfd482016d41d035d9f128e91a51f107230a735
+  aclocal
+  autoconf
+  autoheader
+  automake --add-missing --foreign
+  ./configure --prefix=/usr
+  make
+  make DESTDIR="$PKG" install
+}

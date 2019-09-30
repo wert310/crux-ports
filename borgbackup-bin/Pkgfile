@@ -1,0 +1,14 @@
+# Description: Borg backup - prebuilt standalone binary
+# URL: https://borgbackup.readthedocs.io/en/stable/installation#standalone-binary
+# Maintainer: Lorenzo Veronese, 310wert at gmail dot com
+# Depends on: fuse
+
+name=borgbackup-bin
+version=1.1.10
+release=1
+source=(https://github.com/borgbackup/borg/releases/download/$version/borg-linux64)
+
+build() {
+	install -T -D borg-linux64 $PKG/usr/bin/borg
+        chmod +x $PKG/usr/bin/borg
+}

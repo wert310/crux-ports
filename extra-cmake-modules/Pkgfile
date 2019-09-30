@@ -1,0 +1,19 @@
+# Description:	Extra cmake modules
+# URL:		http://fmtlib.net/
+# Maintainer:	Lorenzo Veronese, 310wert at gmail dot com
+# Depends on:	cmake
+
+name=extra-cmake-modules
+version=5.61.0
+release=1
+source=(https://github.com/KDE/$name/archive/v$version/$name-$version.tar.gz)
+
+build() {
+	mkdir build; cd build
+
+	cmake ../$name-$version \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DCMAKE_INSTALL_PREFIX=/usr
+	make
+	make DESTDIR=$PKG install
+}

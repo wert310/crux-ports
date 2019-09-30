@@ -1,0 +1,14 @@
+# Description: Unicode Fonts for Ancient Scripts"
+# URL: http://users.teilar.gr/~g1951d/
+# Maintainer: Lorenzo Veronese, 310wert at gmail dot com
+# Depends on: fontconfig xorg-font-util
+
+name=ttf-ancient-fonts
+version=2.60
+release=1
+source=(https://launchpad.net/ubuntu/+archive/primary/+files/${name}_${version}.orig.tar.xz)
+
+build() {
+        install -d "$PKG/usr/share/fonts/X11/TTF"
+        install -m644 "${name}-${version}.orig/"*.ttf "$PKG/usr/share/fonts/X11/TTF/"
+}

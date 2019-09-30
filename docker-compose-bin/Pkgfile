@@ -1,0 +1,14 @@
+# Description: Define and run multi-container applications with Docker
+# URL: https://github.com/docker/compose/
+# Maintainer: Lorenzo Veronese, 310wert at gmail dot com
+# Depends on: docker
+
+name=docker-compose-bin
+version=1.24.1
+release=1
+source=("https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)")
+
+build() {
+	install -d "$PKG/usr/bin"
+	install -Dm755 "docker-compose-$(uname -s)-$(uname -m)" "$PKG/usr/bin/docker-compose"
+}

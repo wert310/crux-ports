@@ -1,0 +1,15 @@
+# Description: The Haskell Tool Stack
+# URL: https://github.com/commercialhaskell/stack
+# Maintainer: Lorenzo Veronese, 310wert at gmail dot com
+# Depends on: libgmp zlib
+
+name=stack-bin
+version=2.1.3
+release=1
+source=(https://github.com/commercialhaskell/stack/releases/download/v$version/stack-$version-linux-x86_64.tar.gz)
+
+build() {
+	cd stack-$version-*
+	install -d "$PKG/usr/bin"
+	install -Dm755 "stack" "$PKG/usr/bin/stack"
+}

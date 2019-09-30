@@ -1,0 +1,18 @@
+# Description: Terminal file manager written in Go. It is heavily inspired by ranger with some missing and extra features.  
+# URL: https://github.com/gokcehan/lf
+# Maintainer: Lorenzo Veronese, 310wert at gmail dot com
+# Depends on: git go
+
+name=lf
+version=13
+release=1
+source=("https://github.com/gokcehan/$name/archive/r$version.tar.gz")
+_gourl=github.com/gokcehan/$name
+
+build() {
+  export GOPATH="$SRC/build"
+  mkdir -p "`dirname "${GOPATH}/src/$_gourl"`"
+  mv -Tv "$name-r$version" "${GOPATH}/src/$_gourl"
+  go get -v -x $_gourl
+  install -Dm755 "$SRC/build/bin/lf" "$PKG/usr/bin/lf"
+}

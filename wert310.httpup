@@ -1,0 +1,8 @@
+#
+# /etc/ports/wert310.httpup: wert310's port collection
+#
+
+ROOT_DIR=/usr/ports/wert310
+URL=http://wert310.github.io/crux-ports
+
+# End of file

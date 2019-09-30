@@ -1,0 +1,15 @@
+# Description: An IPv4/IPv6 manipulation library in Python
+# URL: http://code.google.com/p/ipaddr-py/
+# Maintainer: Lorenzo Veronese, 310wert at gmail dot com
+# Depends on: python
+
+name=python-ipaddr
+version=2.2.0
+release=1
+source=(https://pypi.python.org/packages/source/i/ipaddr/ipaddr-${version}.tar.gz)
+
+build() {
+  cd ipaddr-$version
+  sed -e 's|/usr/bin/python|/usr/bin/python2|' -i ipaddr.py
+  python2 setup.py install --root="$PKG" -O1
+}

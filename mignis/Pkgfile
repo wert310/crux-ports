@@ -1,0 +1,17 @@
+# Description: Mignis - a semantic based tool for firewall configuration. 
+# URL: https://github.com/secgroup/Mignis 
+# Maintainer: Lorenzo Veronese, 310wert at gmail dot com
+# Depends on: git python-ipaddr
+
+name=mignis
+version=git
+release=1
+source=(https://github.com/secgroup/Mignis/archive/master.tar.gz mignis_edit mignis_commit)
+
+build() {
+	mv Mignis-master mignis
+	install -d "$PKG/usr/share"
+	cp -r mignis "$PKG/usr/share"	
+	install -TDm 755 "mignis_edit" "$PKG/usr/sbin/mignis_edit"
+	install -TDm 755 "mignis_commit" "$PKG/usr/sbin/mignis_commit"
+}

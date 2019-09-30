@@ -1,0 +1,16 @@
+# Description: A compositor for X, and a fork of xcompmgr-dana.
+# URL: https://github.com/yshui/compton
+# Maintainer: Lorenzo Veronese, 310wert at gmail dot com
+# Depends on: dbus libconfig libev libpcre libxdg-basedir mesa3d uthash xorg-libxcomposite xorg-libxinerama xorg-libpixman xorg-libxrandr xorg-xcb-util-image xorg-xcb-util-renderutil
+
+name=compton
+version=0.1_beta2
+release=1
+source=(https://github.com/chjj/compton/archive/v$version.tar.gz)
+
+build() {
+  cd $name-$version
+  make
+  make docs
+  DESTDIR=$PKG make install
+}
