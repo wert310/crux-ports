@@ -1,0 +1,24 @@
+# Description: System V Release 4.0 curses emulation library, ABI 5
+# URL: http://invisible-island.net/ncurses/ncurses.html
+# Maintainer: Lorenzo Veronese, 310wert at gmail dot com
+# Depends on: 
+
+name=ncurses5-compat-libs
+version=6.1
+release=1
+source=(http://ftpmirror.gnu.org/gnu/$name/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr --mandir=/usr/share/man \
+    --with-shared --with-normal --without-debug --without-ada --enable-widec \
+    --disable-pc-files --with-cxx-binding --with-cxx-shared --with-abi-version=5
+    make
+    make DESTDIR=$PKG install
+    rm -rf "$PKG/usr/include/" "$PKG/usr/lib/pkgconfig" "$PKG"/usr/lib/*.so
+    for lib in ncurses ncurses++ form panel menu; do
+      ln -s /usr/lib/lib${lib}w.so.5 "$PKG/usr/lib/lib${lib}.so.5"
+    done
+    ln -s /usr/lib/libncurses.so.5 "$PKG/usr/lib/libtinfo.so.5"
+    ln -s /usr/lib/libncurses.so.5 "$PKG/usr/lib/libtic.so.5"
+}
