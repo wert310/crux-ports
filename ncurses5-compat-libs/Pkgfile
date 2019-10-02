@@ -6,16 +6,16 @@
 name=ncurses5-compat-libs
 version=6.1
 release=1
-source=(http://ftpmirror.gnu.org/gnu/$name/$name-$version.tar.gz)
+source=(http://ftpmirror.gnu.org/gnu/ncurses/ncurses-$version.tar.gz)
 
 build() {
-    cd $name-$version
+    cd ncurses-$version
     ./configure --prefix=/usr --mandir=/usr/share/man \
     --with-shared --with-normal --without-debug --without-ada --enable-widec \
     --disable-pc-files --with-cxx-binding --with-cxx-shared --with-abi-version=5
     make
-    make DESTDIR=$PKG install
-    rm -rf "$PKG/usr/include/" "$PKG/usr/lib/pkgconfig" "$PKG"/usr/lib/*.so
+    make DESTDIR=$PKG install.libs
+    rm -rf "$PKG/usr/include/" "$PKG/usr/lib/pkgconfig" "$PKG"/usr/lib/*.so "$PKG"/usr/lib/*.a
     for lib in ncurses ncurses++ form panel menu; do
       ln -s /usr/lib/lib${lib}w.so.5 "$PKG/usr/lib/lib${lib}.so.5"
     done
