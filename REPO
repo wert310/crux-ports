@@ -4,6 +4,7 @@ d:lf
 d:qt5ct
 d:dmenu
 d:ncurses5-compat-libs
+d:docutils
 d:python-ipaddr
 d:mignis
 d:docker-compose-bin
@@ -29,7 +30,10 @@ f:11d86c1c41d4573820cba1c8c0abecd5:qt5ct/Pkgfile
 f:78fefcbfd5c2d0b531a9af5f9f8bae41:qt5ct/.footprint
 f:2b633937ae29f6f595bb1e7d751fec60:dmenu/.md5sum
 f:76448dc7b1d7d7531892df222d057077:dmenu/Pkgfile
-f:30b83506a28d2436d98c25666a6b4268:ncurses5-compat-libs/Pkgfile
+f:6445bb5ee7af24ac163d3a9cc369359c:ncurses5-compat-libs/Pkgfile
+f:c537d6076d5a59c34d17b927fcc20425:docutils/.md5sum
+f:c2c6e8d4549dec8a79c80b772da506c7:docutils/Pkgfile
+f:a205dda51e8b885cf4fd20ddc06ac507:docutils/.footprint
 f:101abfe269e3bf7bbb98c0bf49191fd0:python-ipaddr/.md5sum
 f:c07e4ec2d13ccff915407430496a472d:python-ipaddr/Pkgfile
 f:4ef343b291b618004baa2535b02f8399:mignis/mignis_commit

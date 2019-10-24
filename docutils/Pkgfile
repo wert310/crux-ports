@@ -1,0 +1,37 @@
+# Description: Text processing system.
+# URL:         http://docutils.sourceforge.net/
+# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Packager:    James Mills, prologic at shortcircuit dot net dot au
+# Depends on:  python
+
+name=docutils
+version=0.13.1
+release=1
+source=(http://download.sourceforge.net/$name/$name-$version.tar.gz)
+
+build() {
+   cd $name-$version
+
+   python3 setup.py build --build-lib=build/python
+   find build/python -type f -exec \
+     sed -i '1s,^#! \?/usr/bin/\(env \|\)python$,#!/usr/bin/python3,' {} \;
+
+   python2 setup.py build --build-lib=build/python2
+   find build/python2 -type f -exec \
+     sed -i '1s,^#! \?/usr/bin/\(env \|\)python$,#!/usr/bin/python2,' {} \;
+
+   /usr/bin/python setup.py build --build-lib=build/python2 install --root=$PKG
+
+   # fix python-docutils conflict
+   for _f in "$PKG"/usr/bin/*.py; do
+      mv -v "$_f" "${_f%.py}2.py"
+   done
+
+   /usr/bin/python3 setup.py build --build-lib=build/python install --root=$PKG
+
+
+   rm $PKG/usr/lib/python2.7/site-packages/docutils/writers/s5_html/themes/README.txt
+   rm $PKG/usr/lib/python2.7/site-packages/docutils/parsers/rst/include/README.txt
+   rm $PKG/usr/lib/python3.7/site-packages/docutils/writers/s5_html/themes/README.txt
+   rm $PKG/usr/lib/python3.7/site-packages/docutils/parsers/rst/include/README.txt
+}
