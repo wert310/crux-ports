@@ -13,6 +13,7 @@ d:compton
 d:emacs
 d:extra-cmake-modules
 d:pamixer
+d:dragon
 d:borgbackup-bin
 d:i3lock
 d:sedutil
@@ -48,10 +49,12 @@ f:2a66fa6236184991e6acb6daeb87eb50:compton/.md5sum
 f:aabcaa04bc181eec35b225b875197b99:compton/Pkgfile
 f:204634b2db773217cb35a6b4ad58c0c8:emacs/.md5sum
 f:d7832601e214b2849de641ee4a31e8a0:emacs/Pkgfile
-f:b1cccbf3a97b2d83725045ac37e2f72c:extra-cmake-modules/.md5sum
+f:38d23abf5373892856f267792a51776b:extra-cmake-modules/.md5sum
 f:7637e3c8fb10b5c6235b2290a3ba4243:extra-cmake-modules/Pkgfile
 f:b73ed11c480a676ad359c3bf3efeaea7:pamixer/.md5sum
 f:4b3a262f00052108cb9d1fe3afb947fb:pamixer/Pkgfile
+f:97f35689f32704d23e43f6e55219aaec:dragon/.md5sum
+f:eb26eba90b9bf8199d2197b0a7ac8eee:dragon/Pkgfile
 f:a4d0361adf754d667c2eecd047622b36:borgbackup-bin/.md5sum
 f:e6afcdb92ff2461c752c8ecf6245ef21:borgbackup-bin/Pkgfile
 f:b30c6608b226ad3aef9b6846a8010ad8:i3lock/.md5sum

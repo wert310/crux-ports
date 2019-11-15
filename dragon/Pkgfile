@@ -1,0 +1,16 @@
+# Description: Drag and drop source/target for X 
+# URL: https://github.com/mwh/dragon
+# Maintainer: Lorenzo Veronese, 310wert at gmail dot com
+# Depends on: gtk3
+
+name=dragon
+version=git
+release=1
+source=(https://github.com/mwh/dragon/archive/master.tar.gz)
+
+build() {
+        cd $name-master
+	make
+	install -d "$PKG/usr/bin"
+	install -TDm 755 "dragon" "$PKG/usr/bin/dragon"
+}
