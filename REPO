@@ -6,6 +6,7 @@ d:dmenu
 d:ncurses5-compat-libs
 d:docutils
 d:python-ipaddr
+d:aspell-it
 d:mignis
 d:docker-compose-bin
 d:hack-ttf
@@ -37,6 +38,8 @@ f:c2c6e8d4549dec8a79c80b772da506c7:docutils/Pkgfile
 f:a205dda51e8b885cf4fd20ddc06ac507:docutils/.footprint
 f:101abfe269e3bf7bbb98c0bf49191fd0:python-ipaddr/.md5sum
 f:c07e4ec2d13ccff915407430496a472d:python-ipaddr/Pkgfile
+f:8689808a27489153d3d353ee01f8de01:aspell-it/.md5sum
+f:ff1d09698350b6e6f92e8457e8e4f3c5:aspell-it/Pkgfile
 f:4ef343b291b618004baa2535b02f8399:mignis/mignis_commit
 f:5ff87ba87e68f19dfec94bed0dfe2ad2:mignis/mignis_edit
 f:d8b51b89ed8541d9e0d07f022aa6be7b:mignis/.md5sum
