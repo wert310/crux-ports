@@ -1,6 +1,7 @@
 d:networkmanager-dmenu
 d:ttf-ancient-fonts
 d:lf
+d:proverif
 d:qt5ct
 d:dmenu
 d:ncurses5-compat-libs
@@ -27,6 +28,8 @@ f:acabddb4b6289a341e5b44462536d000:ttf-ancient-fonts/.md5sum
 f:c3be3fd10762ce437f34d7f309b8cada:ttf-ancient-fonts/Pkgfile
 f:45a3ac0e6da869b7f277193b187a7ce5:lf/.md5sum
 f:111c0cc2026a00641bb319ca835a9081:lf/Pkgfile
+f:6e25faf42c9bfc9354a75690e59d2b9b:proverif/.md5sum
+f:f2d4474da4d69f7a037f98b9f8e4ed58:proverif/Pkgfile
 f:89341892eb98434e3fb2714e814dd1b6:qt5ct/.md5sum
 f:11d86c1c41d4573820cba1c8c0abecd5:qt5ct/Pkgfile
 f:78fefcbfd5c2d0b531a9af5f9f8bae41:qt5ct/.footprint

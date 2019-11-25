@@ -1,0 +1,17 @@
+# Description: ProVerif protocol verifier
+# URL: 
+# Maintainer: Lorenzo Veronese, 310wert at gmail dot com
+# Depends on: ocaml
+
+name=proverif
+version=2.00
+release=1
+source=(https://prosecco.gforge.inria.fr/personal/bblanche/proverif/proverif2.00.tar.gz)
+
+build() {
+        cd $name$version
+	./build || true
+	[ -f proverif ]
+	install -d "$PKG/usr/bin"
+	install -TDm 755 "proverif" "$PKG/usr/bin/proverif"
+}
