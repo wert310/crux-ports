@@ -55,8 +55,8 @@ f:2a66fa6236184991e6acb6daeb87eb50:compton/.md5sum
 f:aabcaa04bc181eec35b225b875197b99:compton/Pkgfile
 f:204634b2db773217cb35a6b4ad58c0c8:emacs/.md5sum
 f:d7832601e214b2849de641ee4a31e8a0:emacs/Pkgfile
-f:51ab3f025d36c3941e748f570fb7bb50:extra-cmake-modules/.md5sum
-f:a750d1a8a0eb1372a816a1611084a9bc:extra-cmake-modules/Pkgfile
+f:ea0f88e73f76229ffa784ddceacf0d2e:extra-cmake-modules/.md5sum
+f:5ddc833dcdb18f2d80578236979107bc:extra-cmake-modules/Pkgfile
 f:b73ed11c480a676ad359c3bf3efeaea7:pamixer/.md5sum
 f:4b3a262f00052108cb9d1fe3afb947fb:pamixer/Pkgfile
 f:97f35689f32704d23e43f6e55219aaec:dragon/.md5sum
