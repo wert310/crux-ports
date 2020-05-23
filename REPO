@@ -15,6 +15,7 @@ d:compton
 d:emacs
 d:extra-cmake-modules
 d:pamixer
+d:acpi_call
 d:dragon
 d:borgbackup-bin
 d:i3lock
@@ -55,10 +56,13 @@ f:2a66fa6236184991e6acb6daeb87eb50:compton/.md5sum
 f:aabcaa04bc181eec35b225b875197b99:compton/Pkgfile
 f:204634b2db773217cb35a6b4ad58c0c8:emacs/.md5sum
 f:d7832601e214b2849de641ee4a31e8a0:emacs/Pkgfile
-f:ea0f88e73f76229ffa784ddceacf0d2e:extra-cmake-modules/.md5sum
-f:5ddc833dcdb18f2d80578236979107bc:extra-cmake-modules/Pkgfile
+f:d776aaa36d584de6cf825dd8eea17931:extra-cmake-modules/.md5sum
+f:9f668be2fa7592cc3e35c689e3bc0aaa:extra-cmake-modules/Pkgfile
 f:b73ed11c480a676ad359c3bf3efeaea7:pamixer/.md5sum
 f:4b3a262f00052108cb9d1fe3afb947fb:pamixer/Pkgfile
+f:b12bf55939ba224b2cba38446d5bb3d8:acpi_call/.md5sum
+f:82a1389dfe353803fb667d2c89b28127:acpi_call/Pkgfile
+f:dcdbc6cc410237fd1f525ecded95bf59:acpi_call/.footprint
 f:97f35689f32704d23e43f6e55219aaec:dragon/.md5sum
 f:eb26eba90b9bf8199d2197b0a7ac8eee:dragon/Pkgfile
 f:a4d0361adf754d667c2eecd047622b36:borgbackup-bin/.md5sum

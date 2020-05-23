@@ -1,0 +1,14 @@
+# Description: call ACPI methods by writing the method name followed by arguments to /proc/acpi/call.
+# URL: https://github.com/mkottman/acpi_call
+# Maintainer: Lorenzo Veronese <310wert at gmail dot com>
+
+name=acpi_call
+version=master
+release=1
+source=(https://github.com/nix-community/$name/archive/$version.tar.gz)
+
+build() {
+  cd $name-$version
+  make
+  install -m 0644 -D acpi_call.ko $PKG/lib/modules/$(uname -r)/extra/acpi_call.ko
+}
